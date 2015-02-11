@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>THEAdressBook</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<header>
+<div class= "header">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-3">
+      
+      </div>
+        
+      <div class="col-sm-6 titulo">
+      <h1> THE ADRESS BOOK :) </h1>
+      </div>
+
+      <div class="col-sm-3 buscador" >
+
+          <%= form_tag search_path do %>
+            <p>
+            
+              <%= text_field_tag :search, nil, class: "form-control" %>
+              <%= submit_tag "Search", :name => nil, class: "input-group" %>
+            </div>  
+            </p>
+          <% end %>     
+
+      </div>
+
+      </div>
+    </div>
+  </div>
+  
+</header>
+
+<body>
+
+
+<%= yield %>
+
+</body>
+
+<footer>
+  derechos reservados 
+</footer>
+</html>
